@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductInputsTable extends Migration
+class CreateProductOutputsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProductInputsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_inputs', function (Blueprint $table) {
+        Schema::create('product_outputs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('amount')->unsigned();
             $table->bigInteger('product_id')->unsigned();
@@ -29,6 +29,6 @@ class CreateProductInputsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_inputs');
+        Schema::dropIfExists('product_outputs');
     }
 }
